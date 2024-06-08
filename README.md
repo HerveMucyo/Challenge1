@@ -1,5 +1,3 @@
-Certainly! Below is a comprehensive README documentation for the two JavaScript functions (`hasSumSubarray` and `modifyString`). The README will include a project overview, usage instructions, and code explanations.
-
 ---
 
 # JavaScript Coding Challenge Solutions
