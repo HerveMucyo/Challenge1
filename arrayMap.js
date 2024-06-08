@@ -1,18 +1,20 @@
-function subarraySum(arr, target) {
-    let sum = 0;
-    let sumSet = new Set();
-    sumSet.add(0);
-    for (let num of arr) {
-        sum += num;
-        if (sumSet.has(sum - target)) {
+// Function to check if there is a subarray that sums to the given number
+function hasSumSubarray(numbers, targetSum) {
+    let currentSum = 0;
+    let seenSums = new Set();
+    seenSums.add(0);
+
+    for (let num of numbers) {
+        currentSum += num;
+        if (seenSums.has(currentSum - targetSum)) {
             return true;
         }
-        sumSet.add(sum);
+        seenSums.add(currentSum);
     }
     return false;
 }
 
 // Example usage:
-const arr = [4, 2, 7, 1, 9, 5];
+const exampleArray = [4, 2, 7, 1, 9, 5];
 const target = 17;
-console.log(subarraySum(arr, target)); // true
+console.log(hasSumSubarray(exampleArray, target)); // true
